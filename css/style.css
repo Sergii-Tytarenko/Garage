@@ -188,7 +188,6 @@ body.lock {
   text-transform: uppercase;
   text-align: center;
   border: none;
-  outline: none;
   cursor: pointer;
   background: #c40b0b;
   overflow: hidden;
@@ -210,8 +209,8 @@ body.lock {
   -webkit-transform: skew(160deg);
           transform: skew(160deg);
   background: #e30b0b;
-  -webkit-transition: width .7s;
-  transition: width .7s;
+  -webkit-transition: all .7s;
+  transition: all .7s;
 }
 
 .btn::after {
@@ -230,6 +229,9 @@ body.lock {
 @media (min-width: 768px) {
   .btn:hover::before {
     width: 120%;
+  }
+  .btn:focus {
+    outline: 1px solid #262626;
   }
 }
 
@@ -941,8 +943,8 @@ button.swiper-pagination-bullet {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: top;
+     object-position: top;
 }
 
 /*----------------------------------------------------------------
@@ -978,7 +980,6 @@ button.swiper-pagination-bullet {
   margin-right: 30px;
   padding-left: 30px;
   font-size: 12px;
-  font-style: normal;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: 0.15px;
@@ -1007,9 +1008,8 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60px;
   padding: 0 40px;
-  background-color: rgba(255, 255, 255, 0.712);
+  background-color: #f0f0f0;
 }
 
 .logo {
@@ -1033,6 +1033,7 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 60px;
 }
 
 .nav-list__item {
@@ -1043,13 +1044,13 @@ button.swiper-pagination-bullet {
   margin-right: 0;
 }
 
-.nav-list__item--list {
+.nav-list__item--menu {
   position: relative;
   padding-right: 15px;
   cursor: pointer;
 }
 
-.nav-list__item--list:after {
+.nav-list__item--menu:after {
   content: '';
   position: absolute;
   top: 50%;
@@ -1061,12 +1062,77 @@ button.swiper-pagination-bullet {
   background: url("../img/icons/expand.svg") center/cover no-repeat;
 }
 
+.nav-list__item--menu:hover .sub-nav,
+.nav-list__item--menu:focus .sub-nav {
+  display: block;
+}
+
+.nav-list__item--menu:hover .nav-list__link,
+.nav-list__item--menu:focus .nav-list__link {
+  color: #C40B0B;
+}
+
 .nav-list__link {
+  line-height: 60px;
+}
+
+.sub-nav {
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  display: none;
+  min-width: 180px;
+  padding: 15px 10px;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  border-top: 2px solid #dbdbdb;
+  background-color: #f0f0f0;
+}
+
+.sub-nav__item {
+  margin-bottom: 10px;
+}
+
+.sub-nav__item:last-child {
+  margin: 0;
+}
+
+.sub-nav__link {
+  line-height: 25px;
+}
+
+.nav-list__link,
+.sub-nav__link {
+  position: relative;
   display: inline-block;
-  padding: 5px 0;
   color: #02133C;
   font-size: 14px;
   font-weight: 700;
-  line-height: 22px;
   letter-spacing: 0.15px;
+}
+
+.nav-list__link:hover, .nav-list__link:focus,
+.sub-nav__link:hover,
+.sub-nav__link:focus {
+  color: #C40B0B;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
