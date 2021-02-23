@@ -94,6 +94,13 @@ input[type="number"]:focus {
   -moz-appearance: textfield;
 }
 
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
 /*----------------------------------------------------------------
     Global
 ----------------------------------------------------------------*/
@@ -1012,6 +1019,12 @@ button.swiper-pagination-bullet {
   background-color: #f0f0f0;
 }
 
+.main-header__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1081,7 +1094,7 @@ button.swiper-pagination-bullet {
   top: 100%;
   left: -10px;
   display: none;
-  min-width: 180px;
+  min-width: 200px;
   padding: 15px 10px;
   -webkit-animation-name: fade;
           animation-name: fade;
@@ -1135,4 +1148,83 @@ button.swiper-pagination-bullet {
   100% {
     opacity: 1;
   }
+}
+
+/* Header Info
+---------------------------------------------------------------*/
+.main-header__basket {
+  position: relative;
+}
+
+.counter {
+  position: absolute;
+  top: -2px;
+  right: -6px;
+  width: 14px;
+  height: 14px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  pointer-events: none;
+  border-radius: 50%;
+  background-color: #C40B0B;
+}
+
+.basket {
+  width: 24px;
+  height: 22px;
+  background: transparent url("../img/icons/shopping.svg") center/cover no-repeat;
+  font-size: 0;
+  cursor: pointer;
+}
+
+/* Search
+---------------------------------------------------------------*/
+.search {
+  position: relative;
+  top: 3px;
+  width: 180px;
+  height: 25px;
+  margin-right: 20px;
+  font-size: 0;
+}
+
+.search__input {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px 0 5px;
+  font-size: 16px;
+  color: #02133C;
+  background-color: transparent;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+.search__input:focus {
+  z-index: 1;
+  background-color: #fff;
+}
+
+.search__input:focus + .search__btn {
+  z-index: 2;
+}
+
+.search__btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  display: block;
+  width: 18px;
+  height: 18px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-size: inherit;
+  cursor: pointer;
+  background: transparent url("../img/icons/search.svg") center/cover no-repeat;
 }

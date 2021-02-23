@@ -33,7 +33,7 @@
 						<span>(555) Car-Repair</span>
 					</a>
 
-					<button class="main-header__btn btn">
+					<button class="main-header__btn btn" type="button">
 						<span>Make an Appointment</span>
 					</button>
 				</div>
@@ -112,7 +112,16 @@
 					</nav>
 
 					<div class="main-header__info">
-
+						<form class="search" action="#" method="GET" name="search">
+							<label for="search-area">Enter search text</label>
+							<input class="search__input" type="search" id="search-area" autocomplete="off">
+							<button class="search__btn" type="submit">To find</button>
+						</form>
+						
+						<div class="main-header__basket">
+							<span class="counter">2</span>
+							<button class="basket" type="button">View my check</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -149,6 +158,7 @@
 					</div>
 				</div>
 			</section>
+			<button type="button">send</button>
 		</main> <!-- /.page -->
 
 		<!-- Main-footer -->
