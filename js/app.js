@@ -228,33 +228,42 @@ let _slideToggle = (target, duration = 500) => {
 let spollers = document.querySelectorAll(".spoller");
 let spollersGo = true;
 
-if (spollers.length > 0) {
-	for (let index = 0; index < spollers.length; index++) {
-		const spoller = spollers[index];
-		spoller.addEventListener("click", function (e) {
-			if (spollersGo) {
-				spollersGo = false;
-				if (spoller.classList.contains('spoller-767') && window.innerWidth > 767) {
-					return false;
+function spollersInit () {
+	if (spollers.length > 0) {
+		for (let index = 0; index < spollers.length; index++) {
+			const spoller = spollers[index];
+			spoller.addEventListener("click", function (e) {
+				if (spollersGo) {
+					spollersGo = false;
+					if (spoller.classList.contains('spoller-767') && window.innerWidth > 767) {
+						return false;
+					}
+			
+					spoller.classList.toggle('active');
+					_slideToggle(spoller.nextElementSibling);
+	
+					setTimeout(function () {
+						spollersGo = true;
+					}, 500);
 				}
-		
-				spoller.classList.toggle('active');
+			});
+			if (spoller.classList.contains('active')) {
 				_slideToggle(spoller.nextElementSibling);
-
-				setTimeout(function () {
-					spollersGo = true;
-				}, 500);
 			}
-		});
-		if (spoller.classList.contains('active')) {
-			_slideToggle(spoller.nextElementSibling);
 		}
-
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 767) {
-                spoller.classList.remove('.active');
-                spoller.nextElementSibling.style.display = '';
-            }
-        });
 	}
 }
+
+spollersInit();
+
+window.addEventListener('resize', () => {
+	if (window.innerWidth > 767) {
+		spollers.forEach(spoller => {
+			spoller.classList.remove('.active');
+			spoller.nextElementSibling.style.display = '';
+		});
+	} else {
+		spollersGo = true;
+		spollersInit();
+	}
+});
