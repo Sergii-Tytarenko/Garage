@@ -259,7 +259,7 @@ spollersInit();
 window.addEventListener('resize', () => {
 	if (window.innerWidth > 767) {
 		spollers.forEach(spoller => {
-			spoller.classList.remove('.active');
+			spoller.classList.remove('active');
 			spoller.nextElementSibling.style.display = '';
 		});
 	} else {

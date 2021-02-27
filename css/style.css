@@ -889,6 +889,12 @@ button.swiper-pagination-bullet {
   height: 1px;
 }
 
+@media (max-width: 767px) {
+  .intro {
+    min-height: 650px;
+  }
+}
+
 .intro__container {
   width: 100%;
 }
@@ -920,6 +926,13 @@ button.swiper-pagination-bullet {
   font-size: 56px;
   line-height: 56px;
   font-weight: 700;
+}
+
+@media (max-width: 420px) {
+  .intro__title {
+    font-size: 37px;
+    line-height: 1.2;
+  }
 }
 
 .slider-intro {
@@ -1047,7 +1060,7 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 40px 0 20px;
+  padding-right: 40px;
   background-color: #f0f0f0;
 }
 
@@ -1151,9 +1164,14 @@ button.swiper-pagination-bullet {
   }
 }
 
+.nav-list__item--menu:hover .spoller,
+.nav-list__item--menu:focus .spoller {
+  color: #C40B0B;
+}
+
 .nav-list__link {
   line-height: 60px;
-  padding: 0 19px;
+  padding: 0 23px;
 }
 
 @media (max-width: 767px) {
@@ -1174,7 +1192,7 @@ button.swiper-pagination-bullet {
   content: '';
   position: absolute;
   top: 50%;
-  right: 5px;
+  right: 10px;
   width: 8px;
   height: 5px;
   -webkit-transform: translate(0, -50%);
@@ -1194,10 +1212,6 @@ button.swiper-pagination-bullet {
   }
 }
 
-.spoller:hover, .spoller:focus {
-  color: #C40B0B;
-}
-
 .spoller.active::after {
   -webkit-transform: rotateX(180deg) translate(0, 50%);
           transform: rotateX(180deg) translate(0, 50%);
@@ -1211,7 +1225,6 @@ button.swiper-pagination-bullet {
   left: 0;
   display: none;
   min-width: 200px;
-  padding: 5px 0 10px 19px;
   -webkit-animation-name: fade;
           animation-name: fade;
   -webkit-animation-duration: .4s;
@@ -1228,31 +1241,27 @@ button.swiper-pagination-bullet {
 }
 
 .sub-nav__link {
-  padding: 5px 0;
+  padding: 7px 10px 7px 23px;
   line-height: 25px;
 }
 
 .nav-list__link,
 .sub-nav__link {
   position: relative;
-  display: inline-block;
+  display: block;
   color: #02133C;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.15px;
+  -webkit-transition: background .3s, color .3s;
+  transition: background .3s, color .3s;
 }
 
 .nav-list__link:hover, .nav-list__link:focus,
 .sub-nav__link:hover,
 .sub-nav__link:focus {
   color: #C40B0B;
-}
-
-@media (max-width: 767px) {
-  .nav-list__link,
-  .sub-nav__link {
-    display: block;
-  }
+  background-color: #fff;
 }
 
 @-webkit-keyframes fade {
