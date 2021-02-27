@@ -107,6 +107,8 @@ if (linkNav.length > 0) {
 /* Burger 
 -----------------------------------------------------------------------------*/
 const body = document.querySelector('body'),
+	  wrapper = body.querySelector('.wrapper'),
+	  overlay = document.querySelector('.overlay'),
       mainHeader = document.querySelector('.main-header'),
       burger = document.querySelector('.burger'),
       navigation = document.querySelector('.main-header__nav'),
@@ -143,14 +145,12 @@ navLinks.forEach(el => {
 function showNav () {
     navigation.classList.add('active');
     mainHeader.classList.add('active');
-    body_lock(0);
 }
  
 function closeNav () {
     burger.classList.remove('active');
     navigation.classList.remove('active');
     mainHeader.classList.remove('active');
-    body_lock(0);
 }
 
 
@@ -267,3 +267,53 @@ window.addEventListener('resize', () => {
 		spollersInit();
 	}
 });
+
+
+/* Modal windows
+---------------------------------------------------------------*/
+let modalLinks = document.querySelectorAll('.modal-link');
+
+if (modalLinks.length > 0) {
+	modalLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			let linkTarget = link.dataset.modal;
+            let modalWindow = document.querySelector(`${linkTarget}`);
+
+            modalActive(modalWindow);
+		});
+	});
+}
+
+function modalActive (target) {
+    if (target) {
+        modalShow (target);
+
+        let closeBtn = target.querySelector('.modal__close');
+
+        closeBtn.addEventListener('click', () => {
+            modalClose (target);
+        });
+
+        overlay.addEventListener('click', () => {
+            modalClose (target);
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.code === 'Escape') {
+                modalClose (target);
+            }
+        });
+    }
+}
+
+function modalShow (target) {
+    target.classList.add('modal-show');
+    overlay.classList.add('modal-show');
+	body_lock(0);
+}
+
+function modalClose (target) {
+    target.classList.remove('modal-show');
+    overlay.classList.remove('modal-show');
+    body_lock(0);
+}
