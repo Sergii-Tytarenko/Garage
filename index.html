@@ -124,7 +124,7 @@
 						
 						<div class="main-header__basket">
 							<span class="counter">2</span>
-							<button class="basket" type="button">View my check</button>
+							<button class="basket-btn  modal-link" type="button" data-modal="#basket">View my check</button>
 						</div>
 					</div>
 				</div>
@@ -182,18 +182,20 @@
 
 	<div class="modal modal--enter" tabindex="-1" id="enter">
 		<button class="modal__close" type="button">
-			<span class="visually-hidden">Close window</span>
+			<span class="visually-hidden">Close modal window</span>
 		</button>
 	
 	</div>
 
-	<div class="modal modal--enter" tabindex="-1" id="enter">
+	<div class="modal modal--basket" tabindex="-1" id="basket">
 		<button class="modal__close" type="button">
-			<span class="visually-hidden">Close window</span>
+			<span class="visually-hidden">Close modal window</span>
 		</button>
-	
+		
+		<div class="basket"></div>
 	</div>
 	<div class="overlay"></div>
+	
 	<script src="js/vendors.js"></script>
 	<script src="js/app.js"></script>
 </body>
