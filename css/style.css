@@ -1000,6 +1000,7 @@ button.swiper-pagination-bullet {
 }
 
 .main-header__work {
+  cursor: pointer;
   background: url("../img/icons/time.svg") left top 5px no-repeat;
 }
 
@@ -1561,6 +1562,8 @@ button.swiper-pagination-bullet {
   }
 }
 
+/* Basket
+---------------------------------------------------------------*/
 .basket {
   padding: 15px;
 }
@@ -1670,9 +1673,8 @@ button.swiper-pagination-bullet {
   }
 }
 
-/*----------------------------------------------------------------
-    Appointment
-----------------------------------------------------------------*/
+/* Appointment
+---------------------------------------------------------------*/
 .appoint {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1858,4 +1860,41 @@ button.swiper-pagination-bullet {
 
 .form-appoint__btn {
   min-width: 150px;
+}
+
+/* Work time
+---------------------------------------------------------------*/
+.modal--time {
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-animation: fade .4s;
+          animation: fade .4s;
+  border-radius: 2px;
+}
+
+.work-time {
+  width: 250px;
+  text-align: center;
+}
+
+.work-time__title {
+  padding: 15px 0;
+  font-size: 18px;
+  line-height: 1;
+  text-transform: uppercase;
+  border-bottom: 1px solid #cecece;
+}
+
+.work-time span {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 18px;
+}
+
+.work-time__info {
+  padding: 20px 10px;
+  font-size: 12px;
 }
