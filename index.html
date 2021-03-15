@@ -46,8 +46,8 @@
 
 					<nav class="main-header__nav">
 						<ul class="main-header__list nav-list">
-							<li class="nav-list__item nav-list__item--menu" tabindex="0">
-								<a class="nav-list__link spoller spoller-767">Services</a>
+							<li class="nav-list__item nav-list__item--menu">
+								<a class="nav-list__link spoller spoller-767" href="#">Services</a>
 
 								<ul class="sub-nav">
 									<li class="sub-nav__item">
@@ -88,8 +88,8 @@
 								<a class="nav-list__link" href="#">Reviews</a>
 							</li>
 
-							<li class="nav-list__item nav-list__item--menu" tabindex="0">
-								<a class="nav-list__link spoller spoller-767">Shop</a>
+							<li class="nav-list__item nav-list__item--menu">
+								<a class="nav-list__link spoller spoller-767" href="#">Shop</a>
 								<ul class="sub-nav">
 									<li class="sub-nav__item">
 										<a class="sub-nav__link" href="#">Spare parts</a>
@@ -176,8 +176,39 @@
 		
 		<div class="modal__content">
 			<div class="appoint">
-				<h2>Lorem ipsum dolor sit amet.</h2>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed facilis rem ex saepe rerum expedita deserunt deleniti, alias maiores assumenda modi corrupti beatae qui obcaecati cumque facere impedit praesentium aspernatur vero esse dignissimos, iusto eos. Numquam necessitatibus, temporibus labore dicta, aut a eum laboriosam ad voluptates magnam accusamus. At magni dolore nobis accusamus et nulla aliquam delectus? Vel velit, laboriosam asperiores sunt, magnam hic quis aperiam ducimus illum, corporis sint alias facilis inventore cum ab laudantium temporibus voluptatem. Labore, porro harum id ea eum aliquam quisquam maiores sequi perferendis odit ducimus nisi, veritatis asperiores. Consectetur recusandae mollitia minima tenetur doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus alias corporis architecto? Eos, nisi illum modi, iusto minus temporibus minima quisquam quaerat maxime doloremque magni impedit, eum odio illo nobis.</p>
+				<div class="appoint__titles">
+					<h2 class="appoint__title">Welcome to our service&nbsp;!</h2>
+					<h3 class="appoint__subtitle">Please fill out the form and our specialists will contact you shortly</h3>
+				</div>
+				
+				<form  class="appoint__form form-appoint" action="#" method="POST" name="appointment">
+					<div class="form-appoint__group">
+						<label class="visually-hidden" for="name">Your name</label>
+						<input class="form-appoint__input" type="text" required placeholder="Your name..*" id="name">
+					</div>
+
+					<div class="form-appoint__group">
+						<label class="visually-hidden" for="phone">Your phone</label>
+						<input class="form-appoint__input" type="tel" required placeholder="Your phone..*" id="phone">
+					</div>
+
+					<div class="form-appoint__group">
+						<label class="visually-hidden" for="email">Your e-meil</label>
+						<input class="form-appoint__input" type="email" placeholder="Your e-mail.." id="email">
+					</div>
+
+					<div class="form-appoint__group  form-appoint__group--text">
+						<textarea class="form-appoint__text" placeholder="Your massege.."></textarea>
+					</div>
+
+					<div class="form-appoint__group">
+						<button class="form-appoint__btn btn" type="submit">
+							<span>Send</span>
+						</button>
+					</div>
+				</form>
+
+				<p class="appoint__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, voluptatem nostrum enim velit qui deserunt aliquam minima quisquam suscipit repellendus hic libero, eligendi dicta. Omnis necessitatibus dignissimos maxime quidem magnam?</p>
 			</div>
 		</div>
 	</div>

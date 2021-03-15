@@ -47,9 +47,10 @@ burger.addEventListener('click', function () {
 -----------------------------------------------------------------------------*/
 navLinks.forEach(el => {
     el.addEventListener('click', () => {
-        if(navigation.classList.contains('active')) {
+        if (navigation.classList.contains('active') 
+			&& !el.classList.contains('spoller')) {
             closeNav();
-         }
+        }
     })
 });
 

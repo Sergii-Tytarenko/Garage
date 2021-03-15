@@ -234,11 +234,8 @@ body.lock {
 }
 
 @media (min-width: 768px) {
-  .btn:hover::before {
+  .btn:hover::before, .btn:focus::before {
     width: 120%;
-  }
-  .btn:focus {
-    outline: 1px solid #262626;
   }
 }
 
@@ -1158,8 +1155,7 @@ button.swiper-pagination-bullet {
 }
 
 @media (min-width: 768px) {
-  .nav-list__item--menu:hover .sub-nav,
-  .nav-list__item--menu:focus .sub-nav {
+  .nav-list__item--menu:hover .sub-nav {
     display: block;
   }
 }
@@ -1493,7 +1489,7 @@ button.swiper-pagination-bullet {
 .modal--appoint {
   top: 50%;
   left: 50%;
-  height: clamp(1px, 80vh, 100vh);
+  height: clamp(1px, 70vh, 100vh);
   width: 60%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -1672,4 +1668,194 @@ button.swiper-pagination-bullet {
             transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
+}
+
+/*----------------------------------------------------------------
+    Appointment
+----------------------------------------------------------------*/
+.appoint {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 25px;
+  background: url("../img/bg-top.png") top right/contain no-repeat;
+}
+
+@media (max-width: 767px) {
+  .appoint {
+    padding: 25px 15px;
+  }
+}
+
+.appoint__titles {
+  margin-bottom: 45px;
+}
+
+.appoint__title {
+  margin-bottom: 5px;
+  font-size: 36px;
+  line-height: 56px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 420px) {
+  .appoint__title {
+    font-size: 30px;
+    line-height: 1;
+  }
+}
+
+.appoint__subtitle {
+  max-width: 70%;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 1;
+  color: rgba(93, 93, 93, 0.76);
+  font-weight: 400;
+  text-align: center;
+}
+
+.appoint__form {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.appoint__text {
+  margin-top: auto;
+  font-size: 12px;
+  color: #8a8a8a;
+  text-align: center;
+}
+
+.form-appoint {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 15px;
+}
+
+@media (max-width: 920px) {
+  .form-appoint {
+    display: block;
+  }
+}
+
+.form-appoint__group {
+  margin-bottom: 25px;
+}
+
+.form-appoint__group--text {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1/2/4/3;
+}
+
+.form-appoint__group:last-child {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+}
+
+.form-appoint__input {
+  display: inline-block;
+  height: 40px;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 18px;
+  color: #656565;
+  border: 1px solid #888888;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-appoint__input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.form-appoint__input:-ms-input-placeholder {
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.form-appoint__input::-ms-input-placeholder {
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.form-appoint__input::placeholder {
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.form-appoint__text {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  border: 1px solid #888888;
+  background-color: rgba(255, 255, 255, 0.5);
+  resize: none;
+}
+
+.form-appoint__text::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.form-appoint__text:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.form-appoint__text::-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.form-appoint__text::placeholder {
+  font-family: inherit;
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+@media (max-width: 920px) {
+  .form-appoint__text {
+    min-height: 200px;
+  }
+}
+
+.form-appoint__text:focus::-webkit-input-placeholder, .form-appoint__input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-appoint__text:focus:-ms-input-placeholder, .form-appoint__input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-appoint__text:focus::-ms-input-placeholder, .form-appoint__input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-appoint__text:focus::placeholder, .form-appoint__input:focus::placeholder {
+  color: transparent;
+}
+
+.form-appoint__text:focus, .form-appoint__input:focus {
+  border-color: #4d4de7;
+}
+
+.form-appoint__btn {
+  min-width: 150px;
 }
