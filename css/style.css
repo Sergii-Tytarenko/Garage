@@ -110,7 +110,7 @@ html, body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.2;
   background-color: #F5F5F5;
 }
 
@@ -1467,7 +1467,7 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 920px) {
   .modal--basket {
-    width: calc(80% - 30px);
+    width: calc(80% - 25px);
   }
 }
 
@@ -1525,6 +1525,16 @@ button.swiper-pagination-bullet {
   }
 }
 
+.modal--time {
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-animation: fade .4s;
+          animation: fade .4s;
+  border-radius: 2px;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -1573,7 +1583,6 @@ button.swiper-pagination-bullet {
   min-height: 500px;
   text-align: center;
   font-size: 25px;
-  line-height: 1.2;
   background: url("../img/icons/basket.svg") bottom center no-repeat;
 }
 
@@ -1696,12 +1705,12 @@ button.swiper-pagination-bullet {
 
 .appoint__titles {
   margin-bottom: 45px;
+  line-height: 1;
 }
 
 .appoint__title {
   margin-bottom: 5px;
   font-size: 36px;
-  line-height: 56px;
   font-weight: 700;
   text-align: center;
 }
@@ -1709,7 +1718,6 @@ button.swiper-pagination-bullet {
 @media (max-width: 420px) {
   .appoint__title {
     font-size: 30px;
-    line-height: 1;
   }
 }
 
@@ -1717,7 +1725,6 @@ button.swiper-pagination-bullet {
   max-width: 70%;
   margin: 0 auto;
   font-size: 12px;
-  line-height: 1;
   color: rgba(93, 93, 93, 0.76);
   font-weight: 400;
   text-align: center;
@@ -1862,18 +1869,8 @@ button.swiper-pagination-bullet {
   min-width: 150px;
 }
 
-/* Work time
+/* Work time modal
 ---------------------------------------------------------------*/
-.modal--time {
-  top: 10px;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  -webkit-animation: fade .4s;
-          animation: fade .4s;
-  border-radius: 2px;
-}
-
 .work-time {
   width: 250px;
   text-align: center;
