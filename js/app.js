@@ -8,7 +8,9 @@ const body = document.querySelector('body'),
       navLinks = navigation.querySelectorAll("[href]"),
 	  seach = body.querySelector('.search'),
 	  seachInput = seach.querySelector('.search__input'),
-	  introSwiper = document.querySelector('.slider-intro');
+	  intro = document.querySelector('.intro'),
+	  introSwiper = document.querySelector('.slider-intro'),
+	  about = document.querySelector('.about');
 
 
 
@@ -187,6 +189,15 @@ function modalClose (target) {
     body_lock(0);
 }
 
+/* About animation
+---------------------------------------------------------------*/
+document.addEventListener('scroll', () => {
+	if (pageYOffset > 100) {
+		about.classList.remove('hide');
+	} else {
+		about.classList.add('hide');
+	}
+});
 
 /* SlideToggle
 ---------------------------------------------------------------*/

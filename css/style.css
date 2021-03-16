@@ -106,11 +106,12 @@ input[type='search']::-webkit-search-results-decoration {
 ----------------------------------------------------------------*/
 html, body {
   height: 100%;
-  color: #656565;
+  color: #4b4b4b;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
+  letter-spacing: .15px;
   background-color: #F5F5F5;
 }
 
@@ -168,6 +169,30 @@ body.lock {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.s-header {
+  margin-bottom: 30px;
+}
+
+.title {
+  display: inline-block;
+  margin-bottom: 30px;
+  padding-left: 25px;
+  color: #4b4b4b;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  background: url("../img/icons/chevron_left.svg") left center/6px 9px no-repeat, url("../img/icons/chevron_right.svg") left 4px center/9px 13px no-repeat;
+}
+
+.subtitle {
+  max-width: 580px;
+  color: #02133C;
+  font-weight: 900;
+  font-size: 36px;
 }
 
 /*----------------------------------------------------------------
@@ -883,7 +908,7 @@ button.swiper-pagination-bullet {
 .intro {
   position: relative;
   min-height: 100vh;
-  height: 1px;
+  height: 550px;
 }
 
 @media (max-width: 767px) {
@@ -913,7 +938,6 @@ button.swiper-pagination-bullet {
           justify-content: center;
   width: 100%;
   height: 100%;
-  min-height: 450px;
   padding-top: 120px;
 }
 
@@ -935,7 +959,6 @@ button.swiper-pagination-bullet {
 .slider-intro {
   overflow: hidden;
   height: 100%;
-  min-height: 450px;
 }
 
 .slider-intro__list {
@@ -1894,4 +1917,64 @@ button.swiper-pagination-bullet {
 .work-time__info {
   padding: 20px 10px;
   font-size: 12px;
+}
+
+/*----------------------------------------------------------------
+    About
+----------------------------------------------------------------*/
+.about {
+  max-width: 1020px;
+  margin: 0 auto 120px;
+  padding: 0 85px;
+  -webkit-transform: translate(0, -40px);
+          transform: translate(0, -40px);
+  -webkit-transition: opacity .4s, -webkit-transform .4s ease-in;
+  transition: opacity .4s, -webkit-transform .4s ease-in;
+  transition: transform .4s ease-in, opacity .4s;
+  transition: transform .4s ease-in, opacity .4s, -webkit-transform .4s ease-in;
+  background: #fff url("../img/bg-top.png") right top no-repeat;
+}
+
+@media (min-height: 800px) {
+  .about {
+    -webkit-transform: translate(0, -80px);
+            transform: translate(0, -80px);
+  }
+}
+
+.about.hide {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 0;
+}
+
+.about.hide .about__inner {
+  -webkit-transform: translate(0, 150px);
+          transform: translate(0, 150px);
+  opacity: 0;
+}
+
+.about.hide .about__img {
+  top: 100px;
+}
+
+.about__inner {
+  -webkit-transform: translate(0, 100px);
+          transform: translate(0, 100px);
+  -webkit-transition: opacity 1.2s,  -webkit-transform 1.2s ease-in-out;
+  transition: opacity 1.2s,  -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out,  opacity 1.2s;
+  transition: transform 1.2s ease-in-out,  opacity 1.2s,  -webkit-transform 1.2s ease-in-out;
+}
+
+.about__text {
+  margin-bottom: 35px;
+  line-height: 24px;
+}
+
+.about__img {
+  top: 20px;
+  padding-bottom: 49.42%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
