@@ -177,7 +177,7 @@ body.lock {
 
 .title {
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding-left: 25px;
   color: #4b4b4b;
   font-size: 12px;
@@ -1942,7 +1942,7 @@ button.swiper-pagination-bullet {
 ----------------------------------------------------------------*/
 .about {
   max-width: 1020px;
-  margin: 0 auto 120px;
+  margin: 0 auto 180px;
   padding: 0 85px;
   -webkit-transform: translate(0, -40px);
           transform: translate(0, -40px);
@@ -1957,13 +1957,13 @@ button.swiper-pagination-bullet {
   .about {
     -webkit-transform: translate(0, -80px);
             transform: translate(0, -80px);
+    margin: 0 auto 140px;
   }
 }
 
 @media (max-width: 1070px) {
   .about {
-    max-width: auto;
-    margin: 0 25px 90px;
+    margin: 0 25px 150px;
     padding: 0 45px;
   }
 }
@@ -1976,14 +1976,14 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 575px) {
   .about {
-    margin: 0 20px 70px;
-    padding: 0 25px;
+    margin: 0 20px 90px;
+    padding: 0 15px;
   }
 }
 
 @media (max-width: 420px) {
   .about {
-    margin: 0 0 70px;
+    margin: 0 0 90px;
   }
 }
 
@@ -2042,4 +2042,120 @@ button.swiper-pagination-bullet {
   .about__img {
     top: 10px;
   }
+}
+
+/*----------------------------------------------------------------
+    Promise section
+----------------------------------------------------------------*/
+.promise {
+  margin-bottom: 65px;
+}
+
+@media (max-width: 767px) {
+  .promise {
+    margin-bottom: 35px;
+  }
+}
+
+.promise__titles {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 575px) {
+  .promise__titles {
+    margin-bottom: 40px;
+  }
+}
+
+.promise__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -14px;
+}
+
+@media (max-width: 920px) {
+  .promise__list {
+    margin: 0 -10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .promise__list {
+    margin: 0;
+  }
+}
+
+.promise__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+  margin-bottom: 35px;
+  padding: 0 14px;
+}
+
+@media (max-width: 1020px) {
+  .promise__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+  .promise__item:last-child {
+    margin: 0 auto 35px;
+  }
+}
+
+@media (max-width: 920px) {
+  .promise__item {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .promise__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    padding: 0;
+  }
+}
+
+.card-promise {
+  height: 100%;
+  padding-left: 86px;
+  padding-top: 5px;
+}
+
+.card-promise--q {
+  background: url("../img/promise/quality.svg") left top no-repeat;
+}
+
+.card-promise--s {
+  background: url("../img/promise/certified.svg") left top no-repeat;
+}
+
+.card-promise--r {
+  background: url("../img/promise/team.svg") left top no-repeat;
+}
+
+@media (max-width: 920px) {
+  .card-promise {
+    padding-left: 70px;
+    background-size: 55px auto;
+  }
+}
+
+.card-promise__title {
+  margin-bottom: 15px;
+  color: #02133C;
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 26px;
+  letter-spacing: 0px;
+}
+
+.card-promise__text {
+  line-height: 24px;
 }
