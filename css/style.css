@@ -188,11 +188,23 @@ body.lock {
   background: url("../img/icons/chevron_left.svg") left center/6px 9px no-repeat, url("../img/icons/chevron_right.svg") left 4px center/9px 13px no-repeat;
 }
 
+@media (max-width: 420px) {
+  .title {
+    margin-bottom: 20px;
+  }
+}
+
 .subtitle {
   max-width: 580px;
   color: #02133C;
   font-weight: 900;
   font-size: 36px;
+}
+
+@media (max-width: 420px) {
+  .subtitle {
+    font-size: 30px;
+  }
 }
 
 /*----------------------------------------------------------------
@@ -914,6 +926,12 @@ button.swiper-pagination-bullet {
 @media (max-width: 767px) {
   .intro {
     min-height: 650px;
+  }
+}
+
+@media (max-width: 767px) and (min-height: 720px) {
+  .intro {
+    min-height: 800px;
   }
 }
 
@@ -1942,6 +1960,33 @@ button.swiper-pagination-bullet {
   }
 }
 
+@media (max-width: 1070px) {
+  .about {
+    max-width: auto;
+    margin: 0 25px 90px;
+    padding: 0 45px;
+  }
+}
+
+@media (max-width: 920px) {
+  .about {
+    background-size: 80%;
+  }
+}
+
+@media (max-width: 575px) {
+  .about {
+    margin: 0 20px 70px;
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about {
+    margin: 0 0 70px;
+  }
+}
+
 .about.hide {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
@@ -1967,6 +2012,20 @@ button.swiper-pagination-bullet {
   transition: transform 1.2s ease-in-out,  opacity 1.2s,  -webkit-transform 1.2s ease-in-out;
 }
 
+@media (max-width: 1070px) {
+  .about__inner {
+    -webkit-transform: translate(0, 70px);
+            transform: translate(0, 70px);
+  }
+}
+
+@media (max-width: 575px) {
+  .about__inner {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+}
+
 .about__text {
   margin-bottom: 35px;
   line-height: 24px;
@@ -1977,4 +2036,10 @@ button.swiper-pagination-bullet {
   padding-bottom: 49.42%;
   -webkit-transition: all 1s;
   transition: all 1s;
+}
+
+@media (max-width: 575px) {
+  .about__img {
+    top: 10px;
+  }
 }
