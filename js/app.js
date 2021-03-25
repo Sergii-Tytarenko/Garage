@@ -199,6 +199,25 @@ document.addEventListener('scroll', () => {
 	}
 });
 
+
+/* Promise video
+---------------------------------------------------------------*/
+const promisePromo = document.querySelector('.promise__promo'),
+	  videoBtn = promisePromo.querySelector('.promise__btn'),
+	  promiseVideo = document.querySelector('.promise__video');
+
+videoBtn.addEventListener('click', () => {
+	promiseVideo.play();
+	promiseVideo.controls = 'true';
+	promisePromo.classList.add('active');
+});
+
+promiseVideo.addEventListener('ended', () => {
+	promisePromo.classList.remove('active');
+	promiseVideo.controls = '';
+});
+
+
 /* SlideToggle
 ---------------------------------------------------------------*/
 function _slideUp(target, duration = 500) {
