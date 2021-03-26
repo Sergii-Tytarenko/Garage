@@ -218,6 +218,40 @@ promiseVideo.addEventListener('ended', () => {
 });
 
 
+
+/* Service slider
+---------------------------------------------------------------*/
+const serviceSlider = document.querySelector('.service__slider');
+let mySwiper;
+
+function mobileSlider() {
+	if (window.innerWidth < 767 && serviceSlider.dataset.mobile == 'false') {
+		mySwiper = new Swiper(serviceSlider, {
+			slidesPerView: 1.1,
+			wrapperClass: 'service__list',
+			slideClass: 'service__column',
+			spaceBetween: 5,
+		});
+
+		serviceSlider.dataset.mobile = 'true';
+	}
+
+	if (window.innerWidth > 767) {
+		serviceSlider.dataset.mobile = 'false';
+		if (serviceSlider.classList.contains('swiper-container-initialized')) {
+			mySwiper.destroy();
+		}
+	}
+}
+
+mobileSlider()
+
+window.addEventListener('resize', () => {
+	mobileSlider();
+});
+
+
+
 /* SlideToggle
 ---------------------------------------------------------------*/
 function _slideUp(target, duration = 500) {
