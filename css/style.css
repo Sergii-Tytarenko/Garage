@@ -1413,6 +1413,12 @@ body.lock {
   margin-bottom: 80px;
 }
 
+@media (max-width: 767px) {
+  .promise__container {
+    margin-bottom: 50px;
+  }
+}
+
 .promise__titles {
   margin-bottom: 60px;
 }
@@ -1459,7 +1465,7 @@ body.lock {
             flex: 0 1 50%;
   }
   .promise__item:last-child {
-    margin: 0 auto 35px;
+    margin: 0 auto;
   }
 }
 
@@ -1630,6 +1636,14 @@ body.lock {
   border-color: transparent transparent transparent #c40b0b;
 }
 
+@media (max-width: 767px) {
+  .promise__btn {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
 .card-promise {
   height: 100%;
   padding-left: 86px;
@@ -1700,14 +1714,29 @@ body.lock {
     Service
 ----------------------------------------------------------------*/
 .service {
-  padding: 60px 0 100px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 0;
   text-align: center;
   background: url("../img/bg-top-l.png") left top -10px no-repeat, url("../img/bg-bottom.png") right bottom no-repeat;
 }
 
 @media (max-width: 767px) {
   .service {
-    padding: 50px 0;
+    padding: 60px 0;
+    background-size: 60%;
+  }
+}
+
+@media (max-width: 575px) {
+  .service {
+    background-size: 80%;
+  }
+}
+
+@media (max-width: 420px) {
+  .service {
+    background-size: 90%;
   }
 }
 
@@ -1716,14 +1745,20 @@ body.lock {
   text-align: left;
 }
 
+@media (max-width: 767px) {
+  .service__titles {
+    margin-bottom: 30px;
+  }
+}
+
 .service__slider {
   position: relative;
-  overflow: hidden;
-  margin-bottom: 50px;
+  margin: 0 -12px 50px;
 }
 
 @media (max-width: 767px) {
   .service__slider {
+    overflow: hidden;
     margin-bottom: 30px;
   }
 }
@@ -1743,7 +1778,8 @@ body.lock {
   .service__list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 0 -12px;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
   }
 }
 
@@ -1751,7 +1787,6 @@ body.lock {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: relative;
-  height: 100%;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -1779,7 +1814,7 @@ body.lock {
 .service__item {
   display: block;
   height: 100%;
-  padding: 50px 30px;
+  padding: 30px 20px;
   color: inherit;
   background-color: #fff;
   -webkit-transition: -webkit-box-shadow .3s;
@@ -1788,9 +1823,20 @@ body.lock {
   transition: box-shadow .3s, -webkit-box-shadow .3s;
 }
 
-.service__item:hover, .service__item:focus {
-  -webkit-box-shadow: 0px 8px 16px rgba(38, 38, 38, 0.24), 0px 16px 24px rgba(38, 38, 38, 0.2);
-          box-shadow: 0px 8px 16px rgba(38, 38, 38, 0.24), 0px 16px 24px rgba(38, 38, 38, 0.2);
+@media (min-width: 768px) {
+  .service__item {
+    padding: 50px 30px;
+  }
+  .service__item:hover, .service__item:focus {
+    -webkit-box-shadow: 0px 8px 16px rgba(38, 38, 38, 0.24), 0px 16px 24px rgba(38, 38, 38, 0.2);
+            box-shadow: 0px 8px 16px rgba(38, 38, 38, 0.24), 0px 16px 24px rgba(38, 38, 38, 0.2);
+  }
+}
+
+@media (max-width: 420px) {
+  .service__item {
+    padding: 25px 10px;
+  }
 }
 
 .service__content {

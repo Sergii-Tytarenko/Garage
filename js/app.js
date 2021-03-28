@@ -227,10 +227,28 @@ let mySwiper;
 function mobileSlider() {
 	if (window.innerWidth < 767 && serviceSlider.dataset.mobile == 'false') {
 		mySwiper = new Swiper(serviceSlider, {
-			slidesPerView: 1.1,
 			wrapperClass: 'service__list',
 			slideClass: 'service__column',
+			slidesPerView: 1.2,
 			spaceBetween: 5,
+			freeMode: true,
+			breakpoints: {
+				// when window width is >= 320px
+				320: {
+				  slidesPerView: 1.2,
+				  spaceBetween: 5
+				},
+				// when window width is >= 480px
+				480: {
+				  slidesPerView: 1.5,
+				  spaceBetween: 10
+				},
+				// when window width is >= 640px
+				640: {
+				  slidesPerView: 1.7,
+				  spaceBetween: 20
+				}
+			  }
 		});
 
 		serviceSlider.dataset.mobile = 'true';
