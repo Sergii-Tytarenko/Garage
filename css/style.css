@@ -893,8 +893,8 @@ body.lock {
 .modal--appoint {
   top: 50%;
   left: 50%;
-  height: clamp(1px, 70vh, 100vh);
-  width: 60%;
+  height: clamp(1px, 560px, 100vh);
+  width: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-animation-name: show-scale;
@@ -903,11 +903,12 @@ body.lock {
           animation-duration: .5s;
   -webkit-animation-timing-function: cubic-bezier(0.25, 0.5, 0.5, 0.9);
           animation-timing-function: cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  background: #02133C url("../img/bg-top.png") top right/80% no-repeat;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 920px) {
   .modal--appoint {
-    width: 80%;
+    width: 70%;
   }
 }
 
@@ -925,6 +926,24 @@ body.lock {
             animation-duration: .5s;
     -webkit-animation-timing-function: cubic-bezier(0.25, 0.5, 0.5, 0.9);
             animation-timing-function: cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  }
+}
+
+@media (max-width: 767px) {
+  .modal--appoint .appoint {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .modal--appoint .appoint__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal--appoint .appoint__form {
+    display: block;
   }
 }
 
@@ -1088,61 +1107,26 @@ body.lock {
 /* Appointment
 ---------------------------------------------------------------*/
 .appoint {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-  padding: 25px;
-  background: url("../img/bg-top.png") top right/contain no-repeat;
-}
-
-@media (max-width: 767px) {
-  .appoint {
-    padding: 25px 15px;
-  }
+  padding: 40px 25px 30px;
 }
 
 .appoint__titles {
-  margin-bottom: 45px;
+  margin-bottom: 60px;
+  color: #bbb7b7;
   line-height: 1;
-}
-
-.appoint__title {
-  margin-bottom: 5px;
-  font-size: 36px;
-  font-weight: 700;
   text-align: center;
 }
 
-@media (max-width: 420px) {
-  .appoint__title {
-    font-size: 30px;
-  }
+.appoint__title {
+  margin-bottom: 10px;
+  font-size: 36px;
+  font-weight: 700;
 }
 
 .appoint__subtitle {
   max-width: 70%;
   margin: 0 auto;
   font-size: 12px;
-  color: rgba(93, 93, 93, 0.76);
-  font-weight: 400;
-  text-align: center;
-}
-
-.appoint__form {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.appoint__text {
-  margin-top: auto;
-  font-size: 12px;
-  color: #8a8a8a;
-  text-align: center;
 }
 
 .form-appoint {
@@ -1153,32 +1137,22 @@ body.lock {
   grid-column-gap: 15px;
 }
 
-@media (max-width: 920px) {
-  .form-appoint {
-    display: block;
-  }
-}
-
 .form-appoint__group {
   margin-bottom: 25px;
 }
 
-.form-appoint__group--text {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 1/2/4/3;
-}
-
-.form-appoint__group:last-child {
+.form-appoint__group--text, .form-appoint__group:last-child {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
-  text-align: center;
 }
 
-.form-appoint__input {
+.form-appoint__group:last-child {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.form-appoint__input, .form-appoint__select {
   display: inline-block;
   height: 40px;
   width: 100%;
@@ -1186,35 +1160,57 @@ body.lock {
   font-size: 18px;
   color: #656565;
   border: 1px solid #888888;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #F5F5F5;
+  -webkit-transition: border-color .3s, background .3s;
+  transition: border-color .3s, background .3s;
 }
 
-.form-appoint__input::-webkit-input-placeholder {
+.form-appoint__input::-webkit-input-placeholder, .form-appoint__select::-webkit-input-placeholder {
   font-size: 14px;
   color: #8a8a8a;
 }
 
-.form-appoint__input:-ms-input-placeholder {
+.form-appoint__input:-ms-input-placeholder, .form-appoint__select:-ms-input-placeholder {
   font-size: 14px;
   color: #8a8a8a;
 }
 
-.form-appoint__input::-ms-input-placeholder {
+.form-appoint__input::-ms-input-placeholder, .form-appoint__select::-ms-input-placeholder {
   font-size: 14px;
   color: #8a8a8a;
 }
 
-.form-appoint__input::placeholder {
+.form-appoint__input::placeholder, .form-appoint__select::placeholder {
   font-size: 14px;
   color: #8a8a8a;
+}
+
+.form-appoint__select {
+  font-family: inherit;
+  font-size: 14px;
+  color: #8a8a8a;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-transition: border-color .3s, background .3s;
+  transition: border-color .3s, background .3s;
+}
+
+.form-appoint__select option {
+  font-size: 16px;
+  color: #656565;
 }
 
 .form-appoint__text {
   width: 100%;
   height: 100%;
+  min-height: 150px;
   padding: 15px;
   border: 1px solid #888888;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #F5F5F5;
+  -webkit-transition: border-color .3s, background .3s;
+  transition: border-color .3s, background .3s;
   resize: none;
 }
 
@@ -1242,12 +1238,6 @@ body.lock {
   color: #8a8a8a;
 }
 
-@media (max-width: 920px) {
-  .form-appoint__text {
-    min-height: 200px;
-  }
-}
-
 .form-appoint__text:focus::-webkit-input-placeholder, .form-appoint__input:focus::-webkit-input-placeholder {
   color: transparent;
 }
@@ -1264,8 +1254,9 @@ body.lock {
   color: transparent;
 }
 
-.form-appoint__text:focus, .form-appoint__input:focus {
+.form-appoint__text:focus, .form-appoint__input:focus, .form-appoint__select:focus {
   border-color: #4d4de7;
+  background-color: #fff;
 }
 
 .form-appoint__btn {

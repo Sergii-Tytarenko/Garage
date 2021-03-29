@@ -325,21 +325,30 @@
 				<form  class="appoint__form form-appoint" action="#" method="POST" name="appointment">
 					<div class="form-appoint__group">
 						<label class="visually-hidden" for="name">Your name</label>
-						<input class="form-appoint__input" type="text" required placeholder="Your name..*" id="name">
+						<input class="form-appoint__input" type="text" required placeholder="Name" id="name">
 					</div>
 
 					<div class="form-appoint__group">
 						<label class="visually-hidden" for="phone">Your phone</label>
-						<input class="form-appoint__input" type="tel" required placeholder="Your phone..*" id="phone">
+						<input class="form-appoint__input" type="tel" required placeholder="Phone number" id="phone">
 					</div>
 
 					<div class="form-appoint__group">
 						<label class="visually-hidden" for="email">Your e-meil</label>
-						<input class="form-appoint__input" type="email" placeholder="Your e-mail.." id="email">
+						<input class="form-appoint__input" type="email" placeholder="Email" id="email">
+					</div>
+
+					<div class="form-appoint__group">
+						<select class="form-appoint__select" name="service-group" id="service-group">
+							<option value="0">Select service</option>
+							<option value="1">Option № 1</option>
+							<option value="2">Option № 1</option>
+							<option value="3">Option № 1</option>
+						</select>
 					</div>
 
 					<div class="form-appoint__group  form-appoint__group--text">
-						<textarea class="form-appoint__text" placeholder="Your massege.."></textarea>
+						<textarea class="form-appoint__text" placeholder="Tell us about the car needing service(s)"></textarea>
 					</div>
 
 					<div class="form-appoint__group">
@@ -348,8 +357,6 @@
 						</button>
 					</div>
 				</form>
-
-				<p class="appoint__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, voluptatem nostrum enim velit qui deserunt aliquam minima quisquam suscipit repellendus hic libero, eligendi dicta. Omnis necessitatibus dignissimos maxime quidem magnam?</p>
 			</div>
 		</div>
 	</div>
