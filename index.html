@@ -303,6 +303,65 @@
 					</a>
 				</div><!--/service__container-->
 			</section>
+
+			<!-- Feedback -->
+			<section class="feedback">
+				<h2 class="visually-hidden">Order service</h2>
+
+				<div class="feedback__container container">
+					<div class="feedback__column">
+						<div class="appoint appoint--main">
+							<div class="appoint__titles">
+								<h2 class="appoint__title">Make an appointment</h2>
+							</div>
+							
+							<form  class="appoint__form form-appoint" action="#" method="POST" name="appointment-main">
+								<div class="form-appoint__group">
+									<label class="visually-hidden" for="name-main">Your name</label>
+									<input class="form-appoint__input" id="name-main" type="text" required placeholder="Name">
+								</div>
+			
+								<div class="form-appoint__group">
+									<label class="visually-hidden" for="phone-main">Your phone</label>
+									<input class="form-appoint__input" id="phone-main" type="tel" required placeholder="Phone number">
+								</div>
+			
+								<div class="form-appoint__group">
+									<label class="visually-hidden" for="email-main">Your e-meil</label>
+									<input class="form-appoint__input" id="email-main" type="email" placeholder="Email">
+								</div>
+			
+								<div class="form-appoint__group">
+									<select class="form-appoint__select" name="service-group-main" id="service-group-main">
+										<option value="0">Select service</option>
+										<option value="1">Option № 1</option>
+										<option value="2">Option № 1</option>
+										<option value="3">Option № 1</option>
+									</select>
+								</div>
+			
+								<div class="form-appoint__group  form-appoint__group--text">
+									<textarea class="form-appoint__text" name="text-main" placeholder="Tell us about the car needing service(s)"></textarea>
+								</div>
+			
+								<div class="form-appoint__group">
+									<button class="form-appoint__btn btn" type="submit">
+										<span>Send</span>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="feedback__column">
+						<div class="served">
+							<h3 class="served__title">Maxime placeat facere possimus omnis </h3>
+							<p class="served__count">17k</p>
+							<p class="served__subtext">customers served (and counting)</p>
+						</div>
+					</div>
+				</div><!--/.feedback__container-->
+			</section>
 		</main> <!-- /.page -->
 
 		<!-- Main-footer -->
@@ -325,17 +384,17 @@
 				<form  class="appoint__form form-appoint" action="#" method="POST" name="appointment">
 					<div class="form-appoint__group">
 						<label class="visually-hidden" for="name">Your name</label>
-						<input class="form-appoint__input" type="text" required placeholder="Name" id="name">
+						<input class="form-appoint__input"  id="name" type="text" required placeholder="Name">
 					</div>
 
 					<div class="form-appoint__group">
 						<label class="visually-hidden" for="phone">Your phone</label>
-						<input class="form-appoint__input" type="tel" required placeholder="Phone number" id="phone">
+						<input class="form-appoint__input"  id="phone" type="tel" required placeholder="Phone number">
 					</div>
 
 					<div class="form-appoint__group">
 						<label class="visually-hidden" for="email">Your e-meil</label>
-						<input class="form-appoint__input" type="email" placeholder="Email" id="email">
+						<input class="form-appoint__input"  id="email" type="email" placeholder="Email">
 					</div>
 
 					<div class="form-appoint__group">
@@ -348,7 +407,7 @@
 					</div>
 
 					<div class="form-appoint__group  form-appoint__group--text">
-						<textarea class="form-appoint__text" placeholder="Tell us about the car needing service(s)"></textarea>
+						<textarea class="form-appoint__text" name="text" placeholder="Tell us about the car needing service(s)"></textarea>
 					</div>
 
 					<div class="form-appoint__group">
