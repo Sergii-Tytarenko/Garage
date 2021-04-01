@@ -2260,12 +2260,12 @@ body.lock {
 
 .gallery__next {
   right: 5px;
-  background: rgba(255, 255, 255, 0.3) url("../img/icons/right-arrow.svg") center/15px 20px no-repeat;
+  background: rgba(255, 255, 255, 0.3) url("../img/icons/right-arrow.svg") 57% center/15px 20px no-repeat;
 }
 
 .gallery__prev {
   left: 5px;
-  background: rgba(255, 255, 255, 0.3) url("../img/icons/left-arrow.svg") center/15px 20px no-repeat;
+  background: rgba(255, 255, 255, 0.3) url("../img/icons/left-arrow.svg") 45% center/15px 20px no-repeat;
 }
 
 .gallery__pagination {
