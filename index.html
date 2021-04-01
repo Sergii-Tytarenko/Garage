@@ -365,7 +365,7 @@
 				</div><!--/.feedback__wrapper-->
 			</section>
 
-			<!-- broadcast -->
+			<!-- Broadcast -->
 			<section class="broadcast">
 				<div class="broadcast__container container">
 					<div class="broadcast__content">
@@ -373,37 +373,79 @@
 							<h2 class="title">GALLERY & Live STREAMS</h2>
 							<h3 class="subtitle">Check out our hard workers</h3>
 						</div>
-	
+						
+						<!-- tabs navigation -->
 						<ul class="broadcast__nav">
-							<li class="broadcast__item">
+							<li class="broadcast__nav-col">
 								<button class="broadcast__btn" type="button">Gallery</button>
 							</li>
 	
-							<li class="broadcast__item">
+							<li class="broadcast__nav-col">
 								<button class="broadcast__btn" type="button">
 									<span class="led">Live stream: Bay 1</span>
 								</button>
 							</li>
 	
-							<li class="broadcast__item">
+							<li class="broadcast__nav-col">
 								<button class="broadcast__btn active" type="button">
 									<span class="led">Live stream: Bay 2</span>
 								</button>
 							</li>
 	
-							<li class="broadcast__item">
+							<li class="broadcast__nav-col">
 								<button class="broadcast__btn" type="button">
 									<span class="led led--off">Live stream: Bay 3</span>
 								</button>
 							</li>
 						</ul>
-	
-						<div class="broadcast__stream broadcast__stream--1 img-cover">
-							<img src="/img/gallery/Image2.jpg" alt="Car">
+						
+						<!-- tabs body -->
+						<!-- gallery slider -->
+						<div class="broadcast__item broadcast__item--gallery">
+							<div class="gallery">
+								<ul class="gallery__images">
+									<li class="gallery__item">
+										<img class="gallery__img" src="/img/gallery/image1.jpg" alt="Car">
+									</li>
+
+									<li class="gallery__item">
+										<img class="gallery__img" src="/img/gallery/image5.jpg" alt="Car">
+									</li>
+
+									<li class="gallery__item">
+										<img class="gallery__img" src="/img/gallery/image6.jpg" alt="Car">
+									</li>
+
+									<li class="gallery__item">
+										<img class="gallery__img" src="/img/gallery/image7.jpg" alt="Car">
+									</li>
+								</ul>
+
+								<button class="gallery__prev">Prev element</button>
+								<button class="gallery__next">Next element</button>
+								<div class="gallery__pagination">
+									<span>Pagination</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- streams -->
+						<div class="broadcast__item img-cover">
+							<img src="/img/gallery/image2.jpg" alt="Car">
 							<span class="led led--stream">Live</span>
 						</div>
-					</div>
-				</div>
+
+						<div class="broadcast__item img-cover">
+							<img src="/img/gallery/image3.jpg" alt="Car">
+							<span class="led led--stream">Live</span>
+						</div>
+
+						<div class="broadcast__item img-cover">
+							<img src="/img/gallery/image4.jpg" alt="Car">
+							<span class="led led--stream led--off">Off</span>
+						</div>
+					</div><!-- /.broadcast__content -->
+				</div><!-- /.broadcast__container -->
 			</section>
 		</main> <!-- /.page -->
 

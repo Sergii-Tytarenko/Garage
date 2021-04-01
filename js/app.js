@@ -269,6 +269,66 @@ window.addEventListener('resize', () => {
 });
 
 
+/* Broadcast Tabs
+---------------------------------------------------------------*/
+const tabsNavigation = document.querySelector('.broadcast__nav'),
+	  navButtons = tabsNavigation.querySelectorAll('.broadcast__btn'),
+	  tabsItems = document.querySelectorAll('.broadcast__item');
+
+
+tabsNavigation.addEventListener('click', (el) => {
+	let target = el.target;
+
+	if (target && target.classList.contains('broadcast__btn')) {
+		navButtons.forEach((btn, i) => {
+			if (target == btn) {
+				showTabContent (i);
+			}
+		});
+	}
+});
+
+function hideTabContent() {
+	tabsItems.forEach(el => {
+		el.classList.add('hide');
+		el.classList.remove('show');
+	});
+
+	navButtons.forEach(btn => {
+		btn.classList.remove('active');
+	});
+}
+
+function showTabContent (i = 0) {
+	hideTabContent();
+
+	navButtons[i].classList.add('active');
+	tabsItems[i].classList.remove('hide');
+	tabsItems[i].classList.add('show');
+}
+
+showTabContent ()
+
+
+/* Gallery
+---------------------------------------------------------------*/
+let gallery = document.querySelector('.gallery');
+
+let gallerySlider = new Swiper(gallery, {
+	wrapperClass: 'gallery__images',
+	slideClass: 'gallery__item',
+	slidesPerView: 1,
+	spaceBetween: 5,
+	navigation: {
+        nextEl: '.gallery__next',
+        prevEl: '.gallery__prev',
+    },
+	pagination: {
+        el: '.gallery__pagination',
+        type: 'progressbar',
+    },
+});
+
 
 /* SlideToggle
 ---------------------------------------------------------------*/
