@@ -2499,3 +2499,212 @@ body.lock {
   font-weight: 700;
   line-height: 24px;
 }
+
+/*----------------------------------------------------------------
+    Impact
+----------------------------------------------------------------*/
+.impact {
+  padding-top: 110px;
+  background: #02133C url("../img/impact/bg.png") center/cover no-repeat;
+}
+
+@media (max-width: 1020px) {
+  .impact {
+    padding-top: 90px;
+  }
+}
+
+@media (max-width: 575px) {
+  .impact {
+    padding-top: 60px;
+  }
+}
+
+.impact__titles {
+  position: relative;
+  margin-bottom: 85px;
+}
+
+@media (max-width: 575px) {
+  .impact__titles {
+    margin-bottom: 70px;
+  }
+}
+
+.impact__titles .title,
+.impact__titles .subtitle {
+  max-width: 420px;
+  color: #fff;
+}
+
+@media (max-width: 1020px) {
+  .impact__titles .subtitle {
+    max-width: 700px;
+    margin-bottom: 20px;
+  }
+}
+
+.impact__poster {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 1020px) {
+  .impact__poster {
+    position: static;
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (max-width: 575px) {
+  .impact__poster {
+    width: 100vw;
+    margin: 0 -15px;
+  }
+}
+
+.impact__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -12px;
+}
+
+@media (max-width: 767px) {
+  .impact__list {
+    margin: 0 0 30px;
+  }
+}
+
+.impact__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  padding: 0 12px;
+  margin-bottom: 34px;
+}
+
+@media (max-width: 1050px) {
+  .impact__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .impact__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .impact__point {
+    display: inline-block;
+  }
+}
+
+.impact__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 70px;
+  background-color: #fff;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+}
+
+@media (max-width: 1020px) {
+  .impact__footer {
+    padding: 25px 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .impact__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin: 0 -15px;
+    padding: 20px;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+.impact__info {
+  max-width: 560px;
+  margin-right: 20px;
+  color: #02133C;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 30px;
+  letter-spacing: 0px;
+}
+
+@media (max-width: 767px) {
+  .impact__info {
+    margin: 0 0 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .impact__info {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+.impact__btn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.point {
+  padding: 10px;
+  padding-left: 90px;
+  color: #fff;
+}
+
+.point--1 {
+  background: url("../img/impact/oil.svg") left top/76px 76px no-repeat;
+}
+
+.point--2 {
+  background: url("../img/impact/transmission.svg") left top/76px 76px no-repeat;
+}
+
+.point--3 {
+  background: url("../img/impact/alignment.svg") left top/76px 76px no-repeat;
+}
+
+.point--4 {
+  background: url("../img/impact/car_engine.svg") left top/76px 76px no-repeat;
+}
+
+.point__count {
+  color: #C40B0B;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 42px;
+  letter-spacing: 0px;
+}
