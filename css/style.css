@@ -678,13 +678,24 @@ body.lock {
 
 .counter {
   position: absolute;
-  top: -2px;
-  right: -6px;
-  width: 14px;
-  height: 14px;
+  top: 0;
+  right: 0;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  -webkit-transform: translate(35%, -25%);
+          transform: translate(35%, -25%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
-  font-size: 10px;
-  line-height: 14px;
+  font-size: 11px;
   text-align: center;
   pointer-events: none;
   border-radius: 50%;
@@ -694,16 +705,31 @@ body.lock {
 .basket-btn {
   width: 24px;
   height: 22px;
+  padding: 5px;
   font-size: 0;
-  background: transparent url("../img/icons/shopping.svg") center/cover no-repeat;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border-radius: 5px;
+  background: transparent url("../img/icons/shopping.svg") center/24px 24px no-repeat;
   cursor: pointer;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+.basket-btn:hover {
+  background-color: #fff;
+}
+
+.basket-btn:focus {
+  outline: 2px solid #C40B0B;
+  outline-offset: 2px;
 }
 
 .search {
   position: relative;
   top: 3px;
   height: 30px;
-  margin-right: 20px;
+  margin-right: 15px;
   font-size: 0;
 }
 
@@ -729,6 +755,11 @@ body.lock {
   -webkit-transition: background .3s;
   transition: background .3s;
   cursor: pointer;
+}
+
+.search__input:focus {
+  outline: 2px solid #C40B0B;
+  outline-offset: 2px;
 }
 
 .search__input.active {
@@ -1313,6 +1344,8 @@ body.lock {
 @media (max-width: 767px) {
   .about {
     margin: 0 0 150px;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 }
 
@@ -2159,6 +2192,8 @@ body.lock {
   line-height: 24px;
   background-color: transparent;
   cursor: pointer;
+  -webkit-transition: color .3s;
+  transition: color .3s;
 }
 
 .broadcast__btn.active {
@@ -2180,6 +2215,10 @@ body.lock {
   opacity: 0;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
+}
+
+.broadcast__btn:hover, .broadcast__btn:focus {
+  color: #C40B0B;
 }
 
 .broadcast__item {
@@ -2259,6 +2298,8 @@ body.lock {
   font-size: 0;
   border-radius: 50%;
   cursor: pointer;
+  -webkit-transition: background .3s;
+  transition: background .3s;
 }
 
 @media (min-width: 768px) {
@@ -2267,14 +2308,22 @@ body.lock {
   }
 }
 
+.gallery__next:hover, .gallery__prev:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.gallery__next:focus, .gallery__prev:focus {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
 .gallery__next {
   right: 5px;
-  background: rgba(255, 255, 255, 0.3) url("../img/icons/right-arrow.svg") 57% center/15px 20px no-repeat;
+  background: rgba(255, 255, 255, 0.2) url("../img/icons/right-arrow.svg") 57% center/15px 20px no-repeat;
 }
 
 .gallery__prev {
   left: 5px;
-  background: rgba(255, 255, 255, 0.3) url("../img/icons/left-arrow.svg") 45% center/15px 20px no-repeat;
+  background: rgba(255, 255, 255, 0.2) url("../img/icons/left-arrow.svg") 45% center/15px 20px no-repeat;
 }
 
 .gallery__pagination {
@@ -3009,4 +3058,9 @@ body.lock {
 
 .dev__link:hover {
   color: #C40B0B;
+}
+
+.dev__link:focus {
+  outline: 2px solid #C40B0B;
+  outline-offset: 2px;
 }
