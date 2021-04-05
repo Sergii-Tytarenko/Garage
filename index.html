@@ -8,6 +8,15 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="Author" content="SMT">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+	<link rel="manifest" href="img/favicons/site.webmanifest">
+	<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="theme-color" content="#ffffff">
 </head>
 <body>
 	<div class="wrapper">
@@ -316,7 +325,7 @@
 									<h2 class="appoint__title">Make an appointment</h2>
 								</div>
 								
-								<form  class="appoint__form form-appoint" action="#" method="POST" name="appointment-main">
+								<form  class="appoint__form form-appoint" action="#" method="POST" name="appointment-main" autocomplete="off">
 									<div class="form-appoint__group">
 										<label class="visually-hidden" for="name-main">Your name</label>
 										<input class="form-appoint__input" id="name-main" type="text" required placeholder="Name">
@@ -659,7 +668,7 @@
 						<span class="dev">Dev by <a class="dev__link" href="https://github.com/Sergii-Tytarenko" target="_blank">SMT</a></span>
 					</p>
 	
-					<p class="main-footer__copyright">&copy; 2018 Company.&emsp;<span class="main-footer__privacy">Privacy Policy | Terms & Conditions</span></p>
+					<p class="main-footer__copyright">&copy; 2018 Company.&emsp;<span class="main-footer__privacy">Privacy Policy&ensp;|&ensp;Terms & Conditions</span></p>
 				</div>
 			</div>	
 		</footer>
@@ -678,7 +687,7 @@
 					<h3 class="appoint__subtitle">Please fill out the form and our specialists will contact you shortly</h3>
 				</div>
 				
-				<form  class="appoint__form form-appoint" action="#" method="POST" name="appointment">
+				<form  class="appoint__form form-appoint" action="#" method="POST" name="appointment" autocomplete="off">
 					<div class="form-appoint__group">
 						<label class="visually-hidden" for="name">Your name</label>
 						<input class="form-appoint__input"  id="name" type="text" required placeholder="Name">
@@ -747,6 +756,10 @@
 		</div>
 	</div>
 	<div class="overlay"></div>
+	<button class="btn btn--up" type="button" title="Up">
+		Scroll up
+		<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" ><path fill="#999" d="M180.573 448C169.211 448 160 438.789 160 427.428V255.991H43.021c-7.125 0-10.695-8.612-5.66-13.653L209.444 70.035c8.036-8.046 21.076-8.047 29.112 0L410.64 242.338c5.035 5.041 1.464 13.653-5.66 13.653H288v171.437C288 438.79 278.789 448 267.427 448h-86.854m0 32h86.855C296.416 480 320 456.416 320 427.428V287.991h84.979c35.507 0 53.497-43.04 28.302-68.266L261.198 47.422c-20.55-20.576-53.842-20.58-74.396 0L14.719 219.724c-25.091 25.122-7.351 68.266 28.302 68.266H128v139.437C128 456.416 151.584 480 180.573 480z" class=""></path></svg>
+	</button>
 	
 	<script src="js/vendors.js"></script>
 	<script src="js/app.js"></script>

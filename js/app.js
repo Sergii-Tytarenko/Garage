@@ -88,9 +88,15 @@ document.addEventListener('click', (e) => {
 	}
 });
 
+document.addEventListener('keydown', function (e) {
+	if (e.code === 'Escape') {
+		hideSeach();
+	}
+});
+
 function hideSeach () {
 	seachInput.classList.remove('active');
-	seach.classList.remove('active')
+	seach.classList.remove('active');
 }
 
 
@@ -421,6 +427,33 @@ if (linkNav.length > 0) {
             }
         });
     }
+}
+
+
+/* Up button
+---------------------------------------------------------------*/
+let upBtn = document.querySelector('.btn--up');
+
+window.addEventListener('scroll', trackScroll);
+upBtn.addEventListener('click', backToTop);
+
+function trackScroll() {
+	let scrolled = window.pageYOffset;
+	let coords = document.documentElement.clientHeight;
+
+	if (scrolled > coords) {
+		upBtn.classList.add('active');
+	}
+	if (scrolled < coords) {
+		upBtn.classList.remove('active');
+	}
+}
+
+function backToTop() {
+	if (window.pageYOffset > 0) {
+		window.scrollBy(0, -500);
+		setTimeout(backToTop, 0);
+	}
 }
 
 
