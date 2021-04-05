@@ -73,7 +73,7 @@ function closeNav () {
 
 /* Show Seach
 ---------------------------------------------------------------*/
-seachInput.addEventListener('click', (e) => {
+seachInput.addEventListener('mousedown', (e) => {
 	 seachInput.classList.add('active');
 	 seach.classList.add('active');
 });
