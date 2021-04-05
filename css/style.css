@@ -515,7 +515,7 @@ body.lock {
     position: absolute;
     top: -1000px;
     left: 0;
-    z-index: 100;
+    z-index: 0;
     width: 100%;
     margin: 0;
     background-color: #fff;
@@ -749,13 +749,8 @@ body.lock {
   transition: background .3s;
 }
 
-.basket-btn:hover {
+.basket-btn:hover, .basket-btn:focus {
   background-color: #fff;
-}
-
-.basket-btn:focus {
-  outline: 2px solid #C40B0B;
-  outline-offset: 2px;
 }
 
 .search {
@@ -842,7 +837,7 @@ body.lock {
 
 .burger {
   position: relative;
-  z-index: 102;
+  z-index: 0;
   display: none;
   width: 25px;
   height: 14px;
