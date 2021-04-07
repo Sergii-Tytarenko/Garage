@@ -72,6 +72,10 @@ textarea {
   font-family: inherit;
 }
 
+input {
+  border-radius: none im !important;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
