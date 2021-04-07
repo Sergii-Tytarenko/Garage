@@ -286,12 +286,18 @@ body.lock {
   padding: 10px;
   font-size: 0;
   border-radius: 10px;
-  background-color: rgba(169, 200, 240, 0.2);
+  background-color: rgba(169, 200, 240, 0.4);
   opacity: 0;
-  -webkit-transition: background .4s;
-  transition: background .4s;
   -webkit-animation: fade .5s;
           animation: fade .5s;
+}
+
+.btn--up .up-icon {
+  fill: #333;
+  -webkit-transition: fill .2s, -webkit-transform .2s;
+  transition: fill .2s, -webkit-transform .2s;
+  transition: fill .2s, transform .2s;
+  transition: fill .2s, transform .2s, -webkit-transform .2s;
 }
 
 .btn--up:after, .btn--up::before {
@@ -305,8 +311,10 @@ body.lock {
   opacity: 1;
 }
 
-.btn--up:hover {
-  background-color: rgba(169, 200, 240, 0.4);
+.btn--up:hover .up-icon {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  fill: #000;
 }
 
 /*----------------------------------------------------------------
@@ -800,13 +808,17 @@ body.lock {
   font-size: 16px;
   color: #02133C;
   background-color: transparent;
-  -webkit-transition: background .3s;
-  transition: background .3s;
   cursor: pointer;
 }
 
 .search__input:focus {
   outline: 2px solid #C40B0B;
+}
+
+@media (max-width: 767px) {
+  .search__input:focus {
+    outline-offset: -2px;
+  }
 }
 
 .search__input.active {
@@ -884,8 +896,13 @@ body.lock {
 }
 
 .burger.active span {
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  height: auto;
+  width: auto;
+  background-color: transparent;
 }
 
 .burger.active::before, .burger.active:after {
@@ -1572,6 +1589,7 @@ body.lock {
   opacity: 1;
   -webkit-transition: opacity .5s;
   transition: opacity .5s;
+  background: url("../img/promise/poster.jpg") top center/cover no-repeat;
 }
 
 .promise__promo.active {
@@ -1579,6 +1597,12 @@ body.lock {
   opacity: 0;
   -webkit-transition: z-index .8s, opacity .5s;
   transition: z-index .8s, opacity .5s;
+}
+
+@media (max-width: 920px) {
+  .promise__promo {
+    background: url("../img/promise/poster-s.jpg") top center/cover no-repeat;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1965,7 +1989,7 @@ body.lock {
 @media (max-width: 420px) {
   .feedback__wrapper {
     background-size: 90%;
-    padding: 60px 0 100px;
+    padding: 60px 0 0;
   }
 }
 
@@ -2084,7 +2108,7 @@ body.lock {
 
 @media (max-width: 420px) {
   .appoint--main {
-    padding: 30px 10px;
+    padding: 30px 10px 60px;
   }
 }
 
