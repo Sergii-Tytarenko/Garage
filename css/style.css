@@ -72,8 +72,10 @@ textarea {
   font-family: inherit;
 }
 
-input {
-  border-radius: none !important;
+input,
+select,
+textarea {
+  border-radius: 0 !important;
 }
 
 input[type="text"],
