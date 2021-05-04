@@ -296,14 +296,14 @@ body.lock {
   opacity: 0;
   -webkit-animation: fade .5s;
           animation: fade .5s;
+  -webkit-transition: background .3s;
+  transition: background .3s;
 }
 
 .btn--up .up-icon {
   fill: #333;
-  -webkit-transition: fill .2s, -webkit-transform .2s;
-  transition: fill .2s, -webkit-transform .2s;
-  transition: fill .2s, transform .2s;
-  transition: fill .2s, transform .2s, -webkit-transform .2s;
+  -webkit-transition: fill .2s;
+  transition: fill .2s;
 }
 
 .btn--up:after, .btn--up::before {
@@ -318,9 +318,11 @@ body.lock {
 }
 
 .btn--up:hover .up-icon {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  fill: #000;
+  fill: #222222;
+}
+
+.btn--up:hover {
+  background-color: rgba(169, 200, 240, 0.6);
 }
 
 /*----------------------------------------------------------------

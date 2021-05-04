@@ -453,8 +453,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	function backToTop() {
 		if (window.pageYOffset > 0) {
-			window.scrollBy(0, -500);
-			setTimeout(backToTop, 0);
+			window.scrollBy(0, -200);
+			setTimeout(backToTop, 10);
 		}
 	}
 
